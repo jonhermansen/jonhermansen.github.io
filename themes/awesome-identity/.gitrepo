@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/posquit0/hugo-awesome-identity.git
+	branch = master
+	commit = 67842a6000f19bf5137bad9faf27f7466795bb35
+	parent = d31f154592c57493faad9270f0f842721ab87028
+	method = merge
+	cmdver = 0.4.3
