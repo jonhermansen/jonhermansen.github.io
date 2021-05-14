@@ -1,3 +1,27 @@
-baseURL = "http://example.org/"
+theme = "awesome-identity"
+baseURL = "https://jh86.org"
+title = "Jon Hermansen's Website"
+
+
+## Profile Configurations
+[params.profile]
+  portrait = "/images/portrait-default.png"
+  firstname = "Jon"
+  lastname = "Hermansen"
+  title = "Software Developer in Test"
+  bio = """Jon Hermansen brings over 15 years experience breaking stuff and automating the breaking of stuff.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et lacinia metus. Aliquam venenatis, orci ornare mollis congue, mi arcu lobortis tellus, id pulvinar ex ante eu mauris.
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+  """
+
+
+## Footer Configurations
+[params.footer]
+  copyright = "© 2019-2021 Jon Hermansen."
+#[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
+  poweredBy = false
+
+#baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+#title = "My New Hugo Site"
+#theme = "awesome-identity"
