@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Checkbox testing</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <label for="unchecked">Unchecked</label>
+    <!-- Default to unchecked -->
+    <input id="unchecked" type="checkbox">
+    <br />
+    <label for="checked">Checked</label>
+    <!-- Default to checked, HTML5 -->
+    <input id="checked" type="checkbox" checked>
+    <br />
+    <label for="indeterminate">Indeterminate</label>
+    <!-- My indeterminate checkbox -->
+    <input id="indeterminate" type="checkbox">
+    <script>
+      const checkbox = document.getElementById("indeterminate");
+      checkbox.indeterminate = true;
+    </script>
+  </body>
+</html>
