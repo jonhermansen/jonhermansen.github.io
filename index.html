@@ -1,35 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jon Hermansen's Blog</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Jon Hermansen's Personal Site</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        @layer base {
+            html {
+                @apply dark:bg-gray-900 dark:text-gray-100;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <header class="bg-white shadow">
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <header class="bg-white dark:bg-gray-800 shadow">
         <div class="container mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold">Jon Hermansen's Blog</h1>
+            <h1 class="text-3xl font-bold">
+                <a href="/" class="text-blue-500 dark:text-blue-400 hover:underline">Jon Hermansen's Personal Site</a>
+            </h1>
+            <nav class="mt-4">
+                <a href="/" class="text-blue-500 dark:text-blue-400 hover:underline mr-4">Home</a>
+                <a href="/about" class="text-blue-500 dark:text-blue-400 hover:underline mr-4">About Me</a>
+                <a href="/resume" class="text-blue-500 dark:text-blue-400 hover:underline mr-4">Resume</a>
+                <a href="/blog" class="text-blue-500 dark:text-blue-400 hover:underline">Blog</a>
+            </nav>
         </div>
     </header>
-    <main class="container mx-auto px-4 py-8">
-        <section class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold">Welcome to My Blog</h2>
-            <p class="mt-2">This is where I share my thoughts and experiences.</p>
+    <main class="container mx-auto px-4 py-8" id="main-content">
+        <!-- Home Page Content -->
+        <section id="home" class="content">
+            <h2 class="text-2xl font-semibold">Welcome to Jon Hermansen's Personal Site</h2>
+            <p>This site showcases my technical capabilities and experiences.</p>
         </section>
-        <section class="mt-8">
-            <h2 class="text-2xl font-semibold mb-4">Latest Posts</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold"><a href="post.html" class="text-blue-500 hover:underline">Starting a New Website</a></h3>
-                <p class="mt-2">I'm excited to announce that I'm starting a new website to share my thoughts and experiences with the world.</p>
-                <p class="mt-4 text-gray-600">Published on January 31, 2025 by Jon Hermansen</p>
+
+        <!-- About Me Page Content -->
+        <section id="about" class="content hidden">
+            <h2 class="text-2xl font-semibold">About Me</h2>
+            <div class="space-y-4">
+                <h3 class="text-xl font-semibold">Work Experience</h3>
+                <div class="job">
+                    <p class="job-title font-bold">Senior UI QA Engineer</p>
+                    <p class="company text-blue-500 dark:text-blue-400"><a href="https://www.mimecast.com/company/" target="_blank">Mimecast</a> (Cybersecurity)</p>
+                    <p class="location text-yellow-500">Lexington, MA</p>
+                    <p class="date text-red-500">June 2019 - January 2021</p>
+                    <ul class="description list-disc list-inside">
+                        <li>Lead tester on a security training and phishing simulation product (Angular).</li>
+                        <li>Updated and maintained the existing automation using Protractor (JavaScript).</li>
+                        <li>Built out new end-to-end and component-level automation using Cypress (TypeScript).</li>
+                        <li>Responsible for the testing and overall quality of product components.</li>
+                        <li>Identified and communicated technical issues, risks and inter-component dependencies.</li>
+                        <li>Highly involved in development, code reviews, configuration management, and deployments.</li>
+                        <li>Frequently assisted other departments in supporting the platform and products.</li>
+                    </ul>
+                </div>
+                <!-- Add more job entries as needed -->
+            </div>
+        </section>
+
+        <!-- Resume Page Content -->
+        <section id="resume" class="content hidden">
+            <h2 class="text-2xl font-semibold">Resume</h2>
+            <p>You can download my resume <a href="/path/to/your/resume.pdf" class="text-blue-500 dark:text-blue-400 hover:underline">here</a>.</p>
+        </section>
+
+        <!-- Blog Page Content -->
+        <section id="blog" class="content hidden">
+            <h2 class="text-2xl font-semibold">Blog</h2>
+            <div class="space-y-4">
+                <div class="post">
+                    <h3 class="text-xl font-semibold"><a href="/blog/starting-a-new-website" class="text-blue-500 dark:text-blue-400 hover:underline">Starting a New Website</a></h3>
+                    <p class="text-gray-600 dark:text-gray-400">Published on January 31, 2025 by Jon Hermansen</p>
+                    <p>I'm excited to announce that I'm starting a new website to share my thoughts and experiences with the world. This blog will be a place where I can write about various topics that interest me, from technology and programming to personal development and travel.</p>
+                    <p>Stay tuned for more updates and articles!</p>
+                </div>
+                <!-- Add more blog posts as needed -->
+            </div>
+        </section>
+
+        <!-- Blog Post Content -->
+        <section id="blog-post" class="content hidden">
+            <h2 class="text-3xl font-semibold">Starting a New Website</h2>
+            <p class="text-gray-600 dark:text-gray-400">Published on January 31, 2025 by Jon Hermansen</p>
+            <div class="space-y-4">
+                <p>I'm excited to announce that I'm starting a new website to share my thoughts and experiences with the world. This blog will be a place where I can write about various topics that interest me, from technology and programming to personal development and travel.</p>
+                <p>Stay tuned for more updates and articles!</p>
             </div>
         </section>
     </main>
-    <footer class="bg-white shadow mt-8">
+    <footer class="bg-white dark:bg-gray-800 shadow mt-8">
         <div class="container mx-auto px-4 py-6 text-center">
             <p>&copy; 2025 Jon Hermansen. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainContent = document.getElementById('main-content');
+            const sections = document.querySelectorAll('.content');
+            const links = document.querySelectorAll('nav a');
+
+            function showSection(sectionId) {
+                sections.forEach(section => section.classList.add('hidden'));
+                document.getElementById(sectionId).classList.remove('hidden');
+            }
+
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const href = link.getAttribute('href');
+                    history.pushState(null, '', href);
+                    showSection(href.substring(1));
+                });
+            });
+
+            window.addEventListener('popstate', () => {
+                const path = window.location.pathname;
+                showSection(path.substring(1) || 'home');
+            });
+
+            const initialPath = window.location.pathname;
+            showSection(initialPath.substring(1) || 'home');
+        });
+    </script>
 </body>
 </html>
+
