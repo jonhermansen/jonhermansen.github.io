@@ -1,131 +1,218 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jon Hermansen's Personal Site</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-
-        @layer base {
-            html {
-                @apply dark:bg-gray-900 dark:text-gray-100;
-            }
-        }
-    </style>
-</head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-    <header class="bg-white dark:bg-gray-800 shadow">
-        <div class="container mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold">
-                <a href="/" class="text-blue-500 dark:text-blue-400 hover:underline">Jon Hermansen's Personal Site</a>
-            </h1>
-            <nav class="mt-4">
-                <a href="/" class="text-blue-500 dark:text-blue-400 hover:underline mr-4">Home</a>
-                <a href="/about" class="text-blue-500 dark:text-blue-400 hover:underline mr-4">About Me</a>
-                <a href="/resume" class="text-blue-500 dark:text-blue-400 hover:underline mr-4">Resume</a>
-                <a href="/blog" class="text-blue-500 dark:text-blue-400 hover:underline">Blog</a>
-            </nav>
-        </div>
-    </header>
-    <main class="container mx-auto px-4 py-8" id="main-content">
-        <!-- Home Page Content -->
-        <section id="home" class="content">
-            <h2 class="text-2xl font-semibold">Welcome to Jon Hermansen's Personal Site</h2>
-            <p>This site showcases my technical capabilities and experiences.</p>
-        </section>
-
-        <!-- About Me Page Content -->
-        <section id="about" class="content hidden">
-            <h2 class="text-2xl font-semibold">About Me</h2>
-            <div class="space-y-4">
-                <h3 class="text-xl font-semibold">Work Experience</h3>
-                <div class="job">
-                    <p class="job-title font-bold">Senior UI QA Engineer</p>
-                    <p class="company text-blue-500 dark:text-blue-400"><a href="https://www.mimecast.com/company/" target="_blank">Mimecast</a> (Cybersecurity)</p>
-                    <p class="location text-yellow-500">Lexington, MA</p>
-                    <p class="date text-red-500">June 2019 - January 2021</p>
-                    <ul class="description list-disc list-inside">
-                        <li>Lead tester on a security training and phishing simulation product (Angular).</li>
-                        <li>Updated and maintained the existing automation using Protractor (JavaScript).</li>
-                        <li>Built out new end-to-end and component-level automation using Cypress (TypeScript).</li>
-                        <li>Responsible for the testing and overall quality of product components.</li>
-                        <li>Identified and communicated technical issues, risks and inter-component dependencies.</li>
-                        <li>Highly involved in development, code reviews, configuration management, and deployments.</li>
-                        <li>Frequently assisted other departments in supporting the platform and products.</li>
-                    </ul>
-                </div>
-                <!-- Add more job entries as needed -->
-            </div>
-        </section>
-
-        <!-- Resume Page Content -->
-        <section id="resume" class="content hidden">
-            <h2 class="text-2xl font-semibold">Resume</h2>
-            <p>You can download my resume <a href="/path/to/your/resume.pdf" class="text-blue-500 dark:text-blue-400 hover:underline">here</a>.</p>
-        </section>
-
-        <!-- Blog Page Content -->
-        <section id="blog" class="content hidden">
-            <h2 class="text-2xl font-semibold">Blog</h2>
-            <div class="space-y-4">
-                <div class="post">
-                    <h3 class="text-xl font-semibold"><a href="/blog/starting-a-new-website" class="text-blue-500 dark:text-blue-400 hover:underline">Starting a New Website</a></h3>
-                    <p class="text-gray-600 dark:text-gray-400">Published on January 31, 2025 by Jon Hermansen</p>
-                    <p>I'm excited to announce that I'm starting a new website to share my thoughts and experiences with the world. This blog will be a place where I can write about various topics that interest me, from technology and programming to personal development and travel.</p>
-                    <p>Stay tuned for more updates and articles!</p>
-                </div>
-                <!-- Add more blog posts as needed -->
-            </div>
-        </section>
-
-        <!-- Blog Post Content -->
-        <section id="blog-post" class="content hidden">
-            <h2 class="text-3xl font-semibold">Starting a New Website</h2>
-            <p class="text-gray-600 dark:text-gray-400">Published on January 31, 2025 by Jon Hermansen</p>
-            <div class="space-y-4">
-                <p>I'm excited to announce that I'm starting a new website to share my thoughts and experiences with the world. This blog will be a place where I can write about various topics that interest me, from technology and programming to personal development and travel.</p>
-                <p>Stay tuned for more updates and articles!</p>
-            </div>
-        </section>
-    </main>
-    <footer class="bg-white dark:bg-gray-800 shadow mt-8">
-        <div class="container mx-auto px-4 py-6 text-center">
-            <p>&copy; 2025 Jon Hermansen. All rights reserved.</p>
-        </div>
-    </footer>
+<html>
+    <head>
+        <title>Jon Hermansen</title>
+        <style>
+         img {
+             user-drag: none;
+             -webkit-user-drag: none;
+             user-select: none;
+             -moz-user-select: none;
+             -webkit-user-select: none;
+             -ms-user-select: none;
+         }
+         body {
+             background: white;
+             color: black;
+             font-family: monospace;
+             font-size: 14px;
+             overflow: hidden;
+         }
+         @media (prefers-color-scheme: dark) {
+             body {
+                 background: black;
+                 color: white;
+             }
+         }
+         h1 {
+             display: inline-block;
+         }
+         #overlay {
+             color: #00ff00;
+             position: absolute;
+             right: 0;
+             bottom: 0;
+             margin: 0; //2px 4px;
+             text-align: right;
+         }
+          .center {
+             text-align: center;
+         }
+         #tty {
+             //background-color: black;
+         }
+         #textarea {
+             background-color: black;
+             color: white;
+             //position: absolute;
+             //top: 0;
+             bottom: 0;
+             left: 0;
+             right: 0;
+         }
+         @keyframes blink {
+             0%, 100% {opacity: 1;}
+             50% {opacity: 0;}
+         }
+         .blink {
+             animation: blink 2s ease-in-out infinite;
+         }
+         #top {
+             white-space:nowrap;
+         }
+        </style>
+    </head>
+    <body>
+        <div id="top"></div>
+        <!-- <div class="center"><h1>Jon Hermansen</h1></div> -->
+        <div id="tty"><div id="textarea"><span style="color: #0f0">user@localhost</span> <span style="color: #00f">~ $ </span> <span class="blink">&#9608;</span></div></div>
+        <div id="overlay"><span id="wps">0 WPM</span><br /><span id="fps">0 FPS</span></div>
+    </body>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mainContent = document.getElementById('main-content');
-            const sections = document.querySelectorAll('.content');
-            const links = document.querySelectorAll('nav a');
+     let start_time = new Date();
 
-            function showSection(sectionId) {
-                sections.forEach(section => section.classList.add('hidden'));
-                document.getElementById(sectionId).classList.remove('hidden');
-            }
+     // Disable text selection
+     function returnFalse() {
+         return false;
+     }
+     document.onselectstart = returnFalse;
+     document.onmousedown = returnFalse;
 
-            links.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    const href = link.getAttribute('href');
-                    history.pushState(null, '', href);
-                    showSection(href.substring(1));
-                });
-            });
+     // Disable right click
+     //document.oncontextmenu = returnFalse;
+     //document.body.oncontextmenu = returnFalse;
 
-            window.addEventListener('popstate', () => {
-                const path = window.location.pathname;
-                showSection(path.substring(1) || 'home');
-            });
+     const top2 = document.getElementById("top");
+     for (let i = 0; i < navigator.hardwareConcurrency; i++) {
+         let img = document.createElement("img");
+         img.alt = 'penguin';
+         img.src = 'logo_linux_clut224.png';
+         top2.append(img);
+     }
 
-            const initialPath = window.location.pathname;
-            showSection(initialPath.substring(1) || 'home');
-        });
+     function preamble(username, hostname) {
+         return username + '@' + hostname;
+     }
+
+     let user = 'user';
+     //let preamble = '';
+     let prompt = 'user@localhost';
+     let hostname = 'localhost';
+     let fullHostname = 'localhost';
+     function reqListener() {
+         //alert(this.responseText);
+         if (navigator.userAgent.indexOf('Firefox') !== -1) {
+             user = 'firefox';
+         }
+         if (navigator.userAgent.indexOf('Linux x86_64) AppleWebKit/') !== -1) {
+             user = 'epiphany';
+         }
+         if (navigator.userAgent.indexOf('Chrome/') !== -1) {
+             user = 'chrome';
+         }
+         hostname = JSON.parse(this.responseText)['YourFuckingHostname'];
+         fullHostname = hostname;
+         hostname = hostname.substring(0, hostname.indexOf('.'));
+         //prompt = user + '@' + ;
+         prompt = user + '@' + hostname;
+         //alert(prompt);
+     }
+
+     const req = new XMLHttpRequest();
+     req.addEventListener("load", reqListener);
+     req.open("GET", "https://wtfismyip.com/json");
+     req.send();
+
+     const elem = document.getElementById('fps');
+     const textarea = document.getElementById('textarea');
+     const times = [];
+     let fps = 0;
+
+     function refreshLoop() {
+         window.requestAnimationFrame(function() {
+             const now = performance.now();
+             while (times.length > 0 && times[0] <= now - 1000) {
+                 times.shift();
+             }
+             times.push(now);
+             fps = times.length;
+             elem.innerHTML = fps + ' FPS';
+             refreshLoop();
+         });
+     }
+
+     refreshLoop();
+     //alert(textarea.innerHTML.length);
+     window.onkeydown = function(ev) {
+         //if (ev.key === ' ') {
+             //alert('hello!');
+           //  return false;
+         //}
+         if (ev.keyCode == 9) {
+             //alert('tab was pressed');
+             e.preventDefault();
+             return false;
+         }
+
+             //alert(textarea.innerHTML.length);
+             let keyPressed = ev.key;
+         //if (keyPressed === 'Enter') {
+           //  keyPressed = '<br />';
+         //}
+         if (keyPressed.length === 1 && !ev.ctrlKey) {
+             if (keyPressed === ' ') {
+                 keyPressed = '&nbsp;';
+             }
+             const tmp = textarea.innerHTML.substring(0, textarea.innerHTML.length - 8);
+             textarea.innerHTML = tmp;
+             //= textarea.innerHTML.length - 1;
+             textarea.innerHTML += keyPressed + '<span class="blink">&#9608;</span>';
+         } else if (keyPressed === 'Backspace') {
+             // JAH TODO: This is totally broken and horribly hardcoded
+             if (textarea.innerHTML.length > 113) {
+                 let tmp = textarea.innerHTML.substring(0, textarea.innerHTML.length - 32);
+                 // JAH TODO: If the last character typed is a space, we need to delete extra characters
+                 const cmd = textarea.innerText.substring(textarea.innerText.lastIndexOf('$ ') + 2, textarea.innerText.length - 1);
+                 if (cmd.lastIndexOf(' ') === cmd.length - 2) {
+                     tmp = tmp.substring(0, tmp.length - 17 );
+                 }
+                 textarea.innerHTML = tmp + '<span class="blink">&#9608;</span>';
+             }
+         } else if (keyPressed === 'Enter' || ((ev.key === 'c') && ev.ctrlKey)) {
+             let cursor_length = '<span class="blink">&#9608;</span>'.length;
+             const cmd = textarea.innerText.substring(textarea.innerText.lastIndexOf('$ ') + 2, textarea.innerText.length - 1);
+             const cmd_parts = cmd.split(/\s+/);
+             //alert(JSON.stringify(cmd_parts));
+             let output = '';
+             if (cmd.startsWith('uname')) {
+                 output = 'Linux cachyos 6.13.1-2-cachyos #1 SMP PREEMPT_DYNAMIC Mon, 03 Feb 2025 22:41:34 +0000 x86_64 GNU/Linux<br />';
+             } else if (cmd.startsWith('uptime')) {
+                 output = '20:19:56 up  2:36,  1 user,  load average: 0.21, 0.25, 0.26<br />';
+             } else if (cmd.startsWith('hostname')) {
+                 output = fullHostname + '<br />';
+             } else if (cmd.startsWith('dmesg')) {
+                 function reqListener2() {
+                     let output2 = this.responseText;
+                     output2 = output.replaceAll('\n', '<br />');
+                     textarea.innerHTML += '<br />' + output2 +  '<span style="color: #0f0">' + prompt + '</span> <span style="color: #00f">~ $ </span> <span class="blink">&#9608;</span>';
+                     alert(this.responseText);
+                 }
+                 const req = new XMLHttpRequest();
+                 req.addEventListener("load", reqListener2);
+                 req.open("GET", "https://jh86.org/dmesg.txt");
+                 req.send();
+                 ev.preventDefault();
+                 return false;
+             } else if (cmd.startsWith('pwd')) {
+                 output = '/home/user<br />';
+             }
+             const tmp = textarea.innerHTML.substring(0, textarea.innerHTML.length - 8);
+             textarea.innerHTML = tmp;
+             //= textarea.innerHTML.length - 1;
+             // JAH TODO: Should be handling output as a stream
+             textarea.innerHTML += '<br />' + output +  '<span style="color: #0f0">' + prompt + '</span> <span style="color: #00f">~ $ </span> <span class="blink">&#9608;</span>';
+             //alert(keyPressed);
+         }
+     }
     </script>
-</body>
 </html>
-
