@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/png" href="logo_linux_clut224.png" />
         <title>Jon Hermansen</title>
         <style>
          img {
@@ -195,7 +196,7 @@
                      let output2 = this.responseText;
                      output2 = output.replaceAll('\n', '<br />');
                      textarea.innerHTML += '<br />' + output2 +  '<span style="color: #0f0">' + prompt + '</span> <span style="color: #00f">~ $ </span> <span class="blink">&#9608;</span>';
-                     alert(this.responseText);
+                     //alert(this.responseText);
                  }
                  const req = new XMLHttpRequest();
                  req.addEventListener("load", reqListener2);
